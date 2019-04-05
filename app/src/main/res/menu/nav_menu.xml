@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/test"
+            android:icon="@drawable/avatar"
+            android:title="آزمون چهار گزینه ای" />
+
+        <item
+            android:id="@+id/amar"
+            android:icon="@drawable/avatar"
+            android:title="آمار" />
+
+        <item
+            android:id="@+id/backup"
+            android:icon="@drawable/avatar"
+            android:title="پشتیبان گیری" />
+
+        <item
+            android:id="@+id/restore"
+            android:icon="@drawable/avatar"
+            android:title="بازیابی پشتیبان" />
+
+        <item
+            android:id="@+id/send2excel"
+            android:icon="@drawable/avatar"
+            android:title="ارسال داده ها به فایل اکسل" />
+
+        <item
+            android:id="@+id/setting"
+            android:icon="@drawable/avatar"
+            android:title="تنظیمات" />
+
+    </group>
+
+</menu>

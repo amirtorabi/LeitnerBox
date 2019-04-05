@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Leitner Box</string>
+    <string name="open_drawer">مشاهده منو</string>
+    <string name="close_drawer">بستن منو</string>
+</resources>
