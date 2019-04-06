@@ -5,7 +5,7 @@
     android:background="@drawable/nav_header"
     android:orientation="vertical"
     android:padding="16dp"
-    android:gravity="end"
+    android:gravity="bottom"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
     <ImageView
@@ -17,7 +17,7 @@
         android:contentDescription="profile photo"
          />
 
-    <EditText
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingTop="8dp"
