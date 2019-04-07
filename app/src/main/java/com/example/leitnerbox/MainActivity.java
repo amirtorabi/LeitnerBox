@@ -2,7 +2,9 @@ package com.example.leitnerbox;
 
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.TabLayout;
 import android.support.v4.view.GravityCompat;
+import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -11,11 +13,17 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener  {
+import com.example.leitnerbox.adapter.ViewPagerAdapter;
+import com.example.leitnerbox.fragment.CardFragment;
+import com.example.leitnerbox.fragment.HomeFragment;
+
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     Toolbar mToolbar;
     DrawerLayout mDrawer;
     NavigationView mNavi;
+    TabLayout tabLayout;
+    ViewPager viewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,11 +38,20 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         mNavi = (NavigationView) findViewById(R.id.navigation_view);
         mNavi.setNavigationItemSelectedListener(this);
 
+        tabLayout = findViewById(R.id.tabLayout);
+        viewPager = findViewById(R.id.viewPager);
+
         ActionBarDrawerToggle aToggle = new ActionBarDrawerToggle(this, mDrawer, mToolbar, R.string.open_drawer, R.string.close_drawer);
         mDrawer.addDrawerListener(aToggle);
         aToggle.syncState();
 
+        ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
 
+        viewPagerAdapter.addFragment(new HomeFragment(), "خانه");
+        viewPagerAdapter.addFragment(new CardFragment(), "مشاهده کارت ها");
+
+        viewPager.setAdapter(viewPagerAdapter);
+        tabLayout.setupWithViewPager(viewPager);
 
     }
 
