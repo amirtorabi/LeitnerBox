@@ -19,6 +19,7 @@
         <TableRow>
 
             <TextView
+                android:textAlignment="center"
                 android:layout_column="2"
                 android:background="@color/colorPrimary"
                 android:text="نمای کلی جعبه"

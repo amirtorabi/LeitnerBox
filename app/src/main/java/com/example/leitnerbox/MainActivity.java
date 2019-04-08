@@ -128,6 +128,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         viewPagerAdapter.addFragment(new CardFragment(), "مشاهده کارت ها");
 
         viewPager.setAdapter(viewPagerAdapter);
+
+        // set the default tab to the second tab
+        viewPager.setCurrentItem(1);
+
         tabLayout.setupWithViewPager(viewPager);
     }
 
