@@ -1,5 +1,6 @@
 package com.example.leitnerbox;
 
+import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
@@ -16,6 +17,8 @@ import android.widget.Toast;
 import com.example.leitnerbox.adapter.ViewPagerAdapter;
 import com.example.leitnerbox.fragment.CardFragment;
 import com.example.leitnerbox.fragment.HomeFragment;
+
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -86,6 +89,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         }
 
+    }
+
+    //Add font to this activity
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
 
     private void initToolbar() {
