@@ -6,9 +6,94 @@
     tools:context=".fragment.CardFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:text="مشاهده کارت ها" />-->
+
+    <TableLayout
+        android:stretchColumns="*"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="مشاهده کارت ها" />
+        android:layout_height="wrap_content">
+
+        <TableRow>
+
+            <TextView
+                android:layout_column="2"
+                android:text="نمای کلی جعبه" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView android:text="خانه اول"
+                android:textAlignment="center"
+                />
+
+            <TextView android:text="خانه دوم"
+
+                android:textAlignment="center"
+                />
+
+            <TextView android:text="خانه سوم"
+                android:textAlignment="center"
+                />
+
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:text="0"
+                android:textAlignment="center" />
+
+            <TextView
+                android:text="0"
+                android:textAlignment="center" />
+
+            <TextView
+                android:text="0"
+                android:textAlignment="center" />
+
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView android:text="خانه چهارم"
+                android:layout_weight="1"
+                android:textAlignment="center"
+
+                />
+
+            <TextView android:text="خانه پنجم"
+                android:layout_weight="1"
+                android:textAlignment="center"
+
+
+                />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView android:text="0"
+                android:layout_weight="1"
+                android:textAlignment="center"
+
+
+                />
+
+            <TextView android:text="0"
+                android:layout_weight="1"
+                android:textAlignment="center"
+
+
+                />
+
+        </TableRow>
+
+    </TableLayout>
 
 </FrameLayout>
