@@ -5,8 +5,6 @@
     android:layout_height="match_parent"
     tools:context=".activity.FirstActivity">
 
-
-
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
@@ -14,4 +12,5 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:text="The first activity" />
+
 </RelativeLayout>

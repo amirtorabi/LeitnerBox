@@ -30,32 +30,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mToolbar = (Toolbar) findViewById(R.id.m_toolbar);
-        setSupportActionBar(mToolbar);
+        initToolbar();
+        initNavigationMenu();
 
-        mDrawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-
-        mNavi = (NavigationView) findViewById(R.id.navigation_view);
-        mNavi.setNavigationItemSelectedListener(this);
-
-        tabLayout = findViewById(R.id.tabLayout);
-        viewPager = findViewById(R.id.viewPager);
-
-        ActionBarDrawerToggle aToggle = new ActionBarDrawerToggle(this, mDrawer, mToolbar, R.string.open_drawer, R.string.close_drawer);
-        mDrawer.addDrawerListener(aToggle);
-        aToggle.syncState();
-
-        ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
-
-        viewPagerAdapter.addFragment(new HomeFragment(), "خانه");
-        viewPagerAdapter.addFragment(new CardFragment(), "مشاهده کارت ها");
-
-        viewPager.setAdapter(viewPagerAdapter);
-        tabLayout.setupWithViewPager(viewPager);
-
-    }
-
-    public void setSupportActionBar(Toolbar mToolbar) {
+        setupViewPager();
 
     }
 
@@ -107,6 +85,44 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             super.onBackPressed();
 
         }
+
+    }
+
+    private void initToolbar() {
+
+
+        mToolbar = (Toolbar) findViewById(R.id.m_toolbar);
+        setSupportActionBar(mToolbar);
+
+    }
+
+    private void initNavigationMenu() {
+
+
+        mDrawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+
+        mNavi = (NavigationView) findViewById(R.id.navigation_view);
+        mNavi.setNavigationItemSelectedListener(this);
+
+        ActionBarDrawerToggle aToggle = new ActionBarDrawerToggle(this, mDrawer, mToolbar, R.string.open_drawer, R.string.close_drawer);
+        mDrawer.addDrawerListener(aToggle);
+        aToggle.syncState();
+    }
+
+    private void setupViewPager() {
+        tabLayout = findViewById(R.id.tabLayout);
+        viewPager = findViewById(R.id.viewPager);
+
+        ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
+
+        viewPagerAdapter.addFragment(new HomeFragment(), "خانه");
+        viewPagerAdapter.addFragment(new CardFragment(), "مشاهده کارت ها");
+
+        viewPager.setAdapter(viewPagerAdapter);
+        tabLayout.setupWithViewPager(viewPager);
+    }
+
+    public void setSupportActionBar(Toolbar mToolbar) {
 
     }
 
