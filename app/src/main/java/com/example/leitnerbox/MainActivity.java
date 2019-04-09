@@ -1,6 +1,7 @@
 package com.example.leitnerbox;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
@@ -14,6 +15,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.example.leitnerbox.activity.SettingActivity;
 import com.example.leitnerbox.adapter.ViewPagerAdapter;
 import com.example.leitnerbox.fragment.CardFragment;
 import com.example.leitnerbox.fragment.HomeFragment;
@@ -66,6 +68,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.send2excel:
                 Toast.makeText(this, "send2excel  Selected", Toast.LENGTH_SHORT).show();
                 break;
+
+            case R.id.setting:
+                startActivity(new Intent(this, SettingActivity.class));
+                break;
+
 
         }
 

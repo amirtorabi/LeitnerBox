@@ -11,6 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".activity.FirstActivity"></activity>
+        <activity android:name=".activity.SettingActivity"></activity>
         <activity android:name=".MainActivity"
             android:theme="@style/StatusTransparent">
             <intent-filter>
