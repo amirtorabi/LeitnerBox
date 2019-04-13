@@ -176,7 +176,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         lyt_prepare_flash_cart = findViewById(R.id.lyt_prepare_flash_cart);
         lyt_new_cart = findViewById(R.id.lyt_new_cart);
 
-        ViewAnimation.initShowOut(lyt_new_cart);
+        ViewAnimation.initShowOut(lyt_new_group);
         ViewAnimation.initShowOut(lyt_import_flash_cart);
         ViewAnimation.initShowOut(lyt_prepare_flash_cart);
         ViewAnimation.initShowOut(lyt_new_cart);
@@ -220,7 +220,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         fab_new_cart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "fab_prepare_flash_cart clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "fab_new_cart clicked", Toast.LENGTH_SHORT).show();
             }
         });
 
