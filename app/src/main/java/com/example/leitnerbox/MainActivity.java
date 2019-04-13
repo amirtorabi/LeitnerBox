@@ -15,6 +15,7 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.leitnerbox.activity.SettingActivity;
@@ -39,6 +40,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private View lyt_new_group, lyt_import_flash_cart, lyt_prepare_flash_cart, lyt_new_cart;
     //FOR FAB
 
+    HomeFragment homeFragment;
+    CardFragment cardFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +57,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
     }
-
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -145,8 +147,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
 
-        viewPagerAdapter.addFragment(new HomeFragment(), "خانه");
-        viewPagerAdapter.addFragment(new CardFragment(), "مشاهده کارت ها");
+        viewPagerAdapter.addFragment(homeFragment = new HomeFragment(), "خانه");
+        viewPagerAdapter.addFragment(cardFragment = new CardFragment(), "مشاهده کارت ها");
 
         viewPager.setAdapter(viewPagerAdapter);
 
@@ -154,6 +156,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         viewPager.setCurrentItem(1);
 
         tabLayout.setupWithViewPager(viewPager);
+
     }
 
     public void setSupportActionBar(Toolbar mToolbar) {
@@ -200,6 +203,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "fab_new_group clicked", Toast.LENGTH_SHORT).show();
+
+                ViewAnimation.showOut(lyt_new_group);
+                toggleFabMode(fab_add);
+
             }
         });
 
@@ -207,6 +214,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "fab_import_flash_cart clicked", Toast.LENGTH_SHORT).show();
+                toggleFabMode(fab_add);
+
             }
         });
 
@@ -214,6 +223,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "fab_prepare_flash_cart clicked", Toast.LENGTH_SHORT).show();
+                toggleFabMode(fab_add);
+
             }
         });
 
@@ -221,6 +232,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "fab_new_cart clicked", Toast.LENGTH_SHORT).show();
+                toggleFabMode(fab_add);
+
             }
         });
 
