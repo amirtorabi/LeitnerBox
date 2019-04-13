@@ -8,10 +8,13 @@
     android:fitsSystemWindows="true"
     tools:openDrawer="end">
 
+
     <include
         layout="@layout/toolbar"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+
+    <include layout="@layout/items_fab" />
 
     <android.support.design.widget.NavigationView
         android:id="@+id/navigation_view"
@@ -23,6 +26,7 @@
         app:menu="@menu/nav_menu">
 
     </android.support.design.widget.NavigationView>
+
 
 
 </android.support.v4.widget.DrawerLayout>

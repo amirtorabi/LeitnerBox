@@ -3,6 +3,7 @@ package com.example.leitnerbox;
 import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.GravityCompat;
@@ -13,12 +14,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 import com.example.leitnerbox.activity.SettingActivity;
 import com.example.leitnerbox.adapter.ViewPagerAdapter;
 import com.example.leitnerbox.fragment.CardFragment;
 import com.example.leitnerbox.fragment.HomeFragment;
+import com.example.leitnerbox.utils.ViewAnimation;
 
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
@@ -30,6 +33,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     TabLayout tabLayout;
     ViewPager viewPager;
 
+    //FOR FAB
+    private View back_drop;
+    private boolean rotate = false;
+    private View lyt_new_group, lyt_import_flash_cart, lyt_prepare_flash_cart, lyt_new_cart;
+    //FOR FAB
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,7 +50,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         setupViewPager();
 
+        setupFab();
+
+
     }
+
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -145,6 +159,90 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public void setSupportActionBar(Toolbar mToolbar) {
 
     }
+
+    //FAB
+    private void setupFab() {
+
+        back_drop = findViewById(R.id.back_drop);
+
+        final FloatingActionButton fab_new_group = (FloatingActionButton) findViewById(R.id.fab_new_group);
+        final FloatingActionButton fab_import_flash_cart = (FloatingActionButton) findViewById(R.id.fab_import_flash_cart);
+        final FloatingActionButton fab_prepare_flash_cart = (FloatingActionButton) findViewById(R.id.fab_prepare_flash_cart);
+        final FloatingActionButton fab_new_cart = (FloatingActionButton) findViewById(R.id.fab_new_cart);
+        final FloatingActionButton fab_add = (FloatingActionButton) findViewById(R.id.fab_add);
+
+        lyt_new_group = findViewById(R.id.lyt_new_group);
+        lyt_import_flash_cart = findViewById(R.id.lyt_import_flash_cart);
+        lyt_prepare_flash_cart = findViewById(R.id.lyt_prepare_flash_cart);
+        lyt_new_cart = findViewById(R.id.lyt_new_cart);
+
+        ViewAnimation.initShowOut(lyt_new_cart);
+        ViewAnimation.initShowOut(lyt_import_flash_cart);
+        ViewAnimation.initShowOut(lyt_prepare_flash_cart);
+        ViewAnimation.initShowOut(lyt_new_cart);
+        back_drop.setVisibility(View.GONE);
+
+        fab_add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                toggleFabMode(v);
+            }
+        });
+
+        back_drop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                toggleFabMode(fab_add);
+            }
+        });
+
+        fab_new_group.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "fab_new_group clicked", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        fab_import_flash_cart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "fab_import_flash_cart clicked", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        fab_prepare_flash_cart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "fab_prepare_flash_cart clicked", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        fab_new_cart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "fab_prepare_flash_cart clicked", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+    }
+
+    private void toggleFabMode(View v) {
+        rotate = ViewAnimation.rotateFab(v, !rotate);
+        if (rotate) {
+            ViewAnimation.showIn(lyt_new_group);
+            ViewAnimation.showIn(lyt_import_flash_cart);
+            ViewAnimation.showIn(lyt_prepare_flash_cart);
+            ViewAnimation.showIn(lyt_new_cart);
+            back_drop.setVisibility(View.VISIBLE);
+        } else {
+            ViewAnimation.showOut(lyt_new_group);
+            ViewAnimation.showOut(lyt_import_flash_cart);
+            ViewAnimation.showOut(lyt_prepare_flash_cart);
+            ViewAnimation.showOut(lyt_new_cart);
+            back_drop.setVisibility(View.GONE);
+        }
+    }
+
 
 }
 
