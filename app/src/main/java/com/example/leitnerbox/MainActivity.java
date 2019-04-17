@@ -18,6 +18,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.leitnerbox.activity.ProgressBarActivity;
 import com.example.leitnerbox.activity.SettingActivity;
 import com.example.leitnerbox.adapter.ViewPagerAdapter;
 import com.example.leitnerbox.fragment.CardFragment;
@@ -66,6 +67,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         switch (mId) {
 
             case R.id.test:
+                Intent intent = new Intent(this, ProgressBarActivity.class);
+                startActivity(intent);
                 Toast.makeText(this, "test Selected", Toast.LENGTH_SHORT).show();
                 break;
 
