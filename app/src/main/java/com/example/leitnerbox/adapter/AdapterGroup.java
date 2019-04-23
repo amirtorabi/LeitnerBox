@@ -34,7 +34,6 @@ public class AdapterGroup extends RecyclerView.Adapter<AdapterGroup.PersonViewHo
         return new PersonViewHolder(view);
     }
 
-
     //Data Binding
     @Override
     public void onBindViewHolder(@NonNull PersonViewHolder holder, int i) {
