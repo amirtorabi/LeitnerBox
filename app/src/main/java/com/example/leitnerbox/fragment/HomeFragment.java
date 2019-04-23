@@ -1,5 +1,6 @@
 package com.example.leitnerbox.fragment;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -14,6 +15,8 @@ import com.example.leitnerbox.model.Group;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 
 public class HomeFragment extends Fragment {
@@ -35,6 +38,8 @@ public class HomeFragment extends Fragment {
         return rootView;
     }
 
+
+
     private void initViews() {
 
         RecyclerView recyclerView = rootView.findViewById(R.id.rv_group);
@@ -43,9 +48,9 @@ public class HomeFragment extends Fragment {
         //create data
         groups = new ArrayList<Group>();
 
-        groups.add(new Group("ریاضی", "10", R.color.deep_orange_500));
-        groups.add(new Group("علوم", "20", R.color.purple_400));
-        groups.add(new Group("هنر", "30", R.color.cyan_500));
+        groups.add(new Group("ریاضی", "10"+ " کارت", R.color.deep_orange_500));
+        groups.add(new Group("علوم", "20"+ " کارت", R.color.purple_400));
+        groups.add(new Group("هنر", "30"+ " کارت", R.color.cyan_500));
 
         adapter = new AdapterGroup(groups, rootView.getContext());
 

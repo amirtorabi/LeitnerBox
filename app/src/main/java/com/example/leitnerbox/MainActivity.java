@@ -117,11 +117,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     }
 
-    //Add font to this activity
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
-    }
+//    //Add font to this activity
+//    @Override
+//    protected void attachBaseContext(Context newBase) {
+//        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+//    }
 
     private void initToolbar() {
 

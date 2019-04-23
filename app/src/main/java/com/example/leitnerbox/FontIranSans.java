@@ -9,7 +9,7 @@ public class FontIranSans extends Application {
     public void onCreate() {
         super.onCreate();
         CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
-                .setDefaultFontPath("fonts/Yekan.ttf")
+                .setDefaultFontPath("fonts/iran_sans_regular.ttf")
                 .setFontAttrId(R.attr.fontPath)
                 .build()
         );
