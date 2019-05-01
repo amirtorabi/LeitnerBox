@@ -39,7 +39,7 @@
                         android:id="@+id/lyt_expand"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@android:color/white"
+                        android:background="@drawable/shape_gradient_blue"
                         android:clickable="true"
                         android:gravity="center_vertical"
                         android:minHeight="?attr/actionBarSize"
@@ -55,18 +55,18 @@
                             android:layout_height="wrap_content"
 
                             android:layout_gravity="center_vertical"
-                            android:layout_marginLeft="6dp"
                             android:background="@color/white"
                             android:text="0 کارت"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/blue_600" />
 
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-
-                            android:text="کارت های موجود در خانه"
-                            android:textAppearance="@style/TextFont18_Black" />
+                            android:text="کارت های آماده برای مرور"
+                            android:textAppearance="@style/TextFont18_Black"
+                            android:textColor="@color/white" />
 
                         <ImageButton
                             android:id="@+id/bt_toggle1"
@@ -80,16 +80,17 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:id="@+id/lyt_expand_text"
+                        android:id="@+id/lyt_expand_text1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:padding="@dimen/spacing_large"
-                            android:text=" Test from amir Test Test from amirTest from amirTest from amirTest from amirTest from amirTest from amirTest from amirTest from amirTest from amirTest from amirTest from amirfrom amir " />
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rv_exam"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        </android.support.v7.widget.RecyclerView>
 
                         <View
                             android:layout_width="match_parent"
@@ -123,7 +124,7 @@
                         android:id="@+id/lyt_expand2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@android:color/white"
+                        android:background="@drawable/shape_gradient_blue"
                         android:clickable="true"
                         android:gravity="center_vertical"
                         android:minHeight="?attr/actionBarSize"
@@ -140,7 +141,8 @@
                             android:layout_weight="1"
                             android:text="مرور آزاد کارت ها"
                             android:textAlignment="center"
-                            android:textAppearance="@style/TextFont18_Black" />
+                            android:textAppearance="@style/TextFont18_Black"
+                            android:textColor="@color/white" />
 
                         <ImageButton
                             android:id="@+id/bt_toggle2"
@@ -159,11 +161,12 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:padding="@dimen/spacing_large"
-                            android:text=" Test from amir Test Test from amirTest from amirTest from amirTest from amirTest from amirTest from amirTest from amirTest from amirTest from amirTest from amirTest from amirfrom amir " />
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rv_review"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        </android.support.v7.widget.RecyclerView>
 
                         <View
                             android:layout_width="match_parent"
@@ -182,7 +185,7 @@
 
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="1dp"
+                android:layout_marginTop="16dp"
 
                 android:stretchColumns="*">
 

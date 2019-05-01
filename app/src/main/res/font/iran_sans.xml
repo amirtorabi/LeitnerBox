@@ -7,5 +7,5 @@
     <font
         android:fontStyle="italic"
         android:fontWeight="400"
-        android:font="@font/iran_sans_bold" />
+        android:font="@font/iran_sans_regular" />
 </font-family>

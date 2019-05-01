@@ -10,7 +10,6 @@ import android.widget.TextView;
 
 import com.example.leitnerbox.R;
 import com.example.leitnerbox.model.Group;
-import com.example.leitnerbox.utils.FaNum;
 
 import java.util.List;
 
@@ -41,7 +40,7 @@ public class AdapterGroup extends RecyclerView.Adapter<AdapterGroup.PersonViewHo
         Group group = groupList.get(i);
 
         holder.txtGroupName.setText(group.getGroupName());
-        holder.txtTotalCart.setText(FaNum.convert2PerisanNumber(group.getTotalCartInGroup()));
+        holder.txtTotalCart.setText(group.getTotalCartInGroup());
 
     }
 
