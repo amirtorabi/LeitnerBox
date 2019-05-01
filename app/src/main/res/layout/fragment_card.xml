@@ -6,104 +6,283 @@
     android:layout_height="match_parent"
     tools:context=".fragment.CardFragment">
 
-
-    <TableLayout
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nested_scroll_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
-        android:stretchColumns="*">
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:scrollingCache="true">
 
-        <TableRow>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/spacing_medium">
 
-            <TextView
-                android:layout_column="2"
-                android:background="@color/colorPrimary"
-                android:text="نمای کلی جعبه"
-                android:textAlignment="center"
-                android:textColor="#fff" />
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_middle"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:layout_marginRight="@dimen/spacing_middle"
+                android:layout_marginBottom="@dimen/spacing_medium"
+                android:visibility="visible"
+                app:cardCornerRadius="2dp"
+                app:cardElevation="2dp">
 
-        </TableRow>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
-        <TableRow>
+                    <LinearLayout
+                        android:id="@+id/lyt_expand"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/white"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:minHeight="?attr/actionBarSize"
+                        android:orientation="horizontal">
 
-            <TextView
-                android:background="@drawable/shape_rectangle"
-                android:text="خانه اول"
-                android:textAlignment="center" />
-
-            <TextView
-                android:background="@drawable/shape_rectangle"
-                android:text="خانه دوم"
-
-
-                android:textAlignment="center" />
-
-            <TextView
-                android:background="@drawable/shape_rectangle"
-                android:text="خانه سوم"
-
-                android:textAlignment="center" />
-
-
-        </TableRow>
-
-        <TableRow>
-
-            <TextView
-                android:text="0"
-                android:textAlignment="center" />
-
-            <TextView
-                android:text="0"
-                android:textAlignment="center" />
-
-            <TextView
-                android:text="0"
-                android:textAlignment="center" />
+                        <View
+                            android:layout_width="@dimen/spacing_large"
+                            android:layout_height="wrap_content" />
 
 
-        </TableRow>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
 
-        <TableRow>
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="6dp"
+                            android:background="@color/white"
+                            android:text="0 کارت"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
-            <TextView
-                android:layout_weight="1"
-                android:background="@drawable/shape_rectangle"
-                android:text="خانه چهارم"
-                android:textAlignment="center" />
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
 
-            <TextView
-                android:layout_weight="1"
-                android:background="@drawable/shape_rectangle"
-                android:text="خانه پنجم"
-                android:textAlignment="center"
+                            android:text="کارت های موجود در خانه"
+                            android:textAppearance="@style/TextFont18_Black" />
 
-
-                />
-
-        </TableRow>
-
-        <TableRow>
-
-            <TextView
-                android:layout_weight="1"
-                android:text="0"
-                android:textAlignment="center"
+                        <ImageButton
+                            android:id="@+id/bt_toggle1"
+                            android:layout_width="?attr/actionBarSize"
+                            android:layout_height="?attr/actionBarSize"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:src="@drawable/ic_expand_arrow"
+                            android:tint="@color/grey_80" />
 
 
-                />
+                    </LinearLayout>
 
-            <TextView
-                android:layout_weight="1"
-                android:text="0"
-                android:textAlignment="center"
+                    <LinearLayout
+                        android:id="@+id/lyt_expand_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/spacing_large"
+                            android:text=" Test from amir Test Test from amirTest from amirTest from amirTest from amirTest from amirTest from amirTest from amirTest from amirTest from amirTest from amirTest from amirfrom amir " />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/grey_10" />
 
 
-                />
+                    </LinearLayout>
 
-        </TableRow>
+                </LinearLayout>
 
-    </TableLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_middle"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:layout_marginRight="@dimen/spacing_middle"
+                android:layout_marginBottom="@dimen/spacing_medium"
+                android:visibility="visible"
+                app:cardCornerRadius="2dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/lyt_expand2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/white"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:minHeight="?attr/actionBarSize"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="@dimen/spacing_large"
+                            android:layout_height="wrap_content" />
+
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="مرور آزاد کارت ها"
+                            android:textAlignment="center"
+                            android:textAppearance="@style/TextFont18_Black" />
+
+                        <ImageButton
+                            android:id="@+id/bt_toggle2"
+                            android:layout_width="?attr/actionBarSize"
+                            android:layout_height="?attr/actionBarSize"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:src="@drawable/ic_expand_arrow"
+                            android:tint="@color/grey_80" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lyt_expand_text2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/spacing_large"
+                            android:text=" Test from amir Test Test from amirTest from amirTest from amirTest from amirTest from amirTest from amirTest from amirTest from amirTest from amirTest from amirTest from amirfrom amir " />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/grey_10" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <TableLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+
+                android:stretchColumns="*">
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_column="2"
+                        android:background="@color/colorPrimary"
+                        android:text="نمای کلی جعبه"
+                        android:textAlignment="center"
+                        android:textColor="#fff" />
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:background="@drawable/shape_rectangle"
+                        android:text="خانه اول"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:background="@drawable/shape_rectangle"
+                        android:text="خانه دوم"
+
+
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:background="@drawable/shape_rectangle"
+                        android:text="خانه سوم"
+
+                        android:textAlignment="center" />
+
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:text="0"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:text="0"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:text="0"
+                        android:textAlignment="center" />
+
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:background="@drawable/shape_rectangle"
+                        android:text="خانه چهارم"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:background="@drawable/shape_rectangle"
+                        android:text="خانه پنجم"
+                        android:textAlignment="center"
+
+
+                        />
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:text="0"
+                        android:textAlignment="center"
+
+
+                        />
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:text="0"
+                        android:textAlignment="center"
+
+
+                        />
+
+                </TableRow>
+
+            </TableLayout>
+
+
+        </LinearLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
 
 
 </FrameLayout>

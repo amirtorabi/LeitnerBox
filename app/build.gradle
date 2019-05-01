@@ -18,7 +18,6 @@ android {
     }
 }
 
-
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:28.0.0'
@@ -29,18 +28,9 @@ dependencies {
     implementation 'com.android.support:recyclerview-v7:28.0.0'
     implementation 'uk.co.chrisjenx:calligraphy:2.2.0'
 
-    //numberprogressbar
     implementation 'com.daimajia.numberprogressbar:library:1.4@aar'
 
-    //Easy Flip View
     implementation 'com.wajahatkarim3.EasyFlipView:EasyFlipView:2.1.2'
-
-
-    //Expandable layout
-    implementation 'com.github.aakira:expandable-layout:1.6.0@aar'
-
-    //Expansion Panel
-    implementation 'com.github.florent37:expansionpanel:1.2.2'
 
 
     testImplementation 'junit:junit:4.12'

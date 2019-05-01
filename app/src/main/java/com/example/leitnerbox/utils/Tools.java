@@ -194,14 +194,14 @@ public class Tools {
 //        Toast.makeText(context, "Text copied to clipboard", Toast.LENGTH_SHORT).show();
 //    }
 //
-//    public static void nestedScrollTo(final NestedScrollView nested, final View targetView) {
-//        nested.post(new Runnable() {
-//            @Override
-//            public void run() {
-//                nested.scrollTo(500, targetView.getBottom());
-//            }
-//        });
-//    }
+    public static void nestedScrollTo(final NestedScrollView nested, final View targetView) {
+        nested.post(new Runnable() {
+            @Override
+            public void run() {
+                nested.scrollTo(500, targetView.getBottom());
+            }
+        });
+    }
 //
 //    public static int dip2px(Context context, float dpValue) {
 //        final float scale = context.getResources().getDisplayMetrics().density;
