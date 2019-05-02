@@ -12,7 +12,9 @@ import android.widget.ImageButton;
 
 import com.example.leitnerbox.R;
 import com.example.leitnerbox.adapter.AdapterExam;
+import com.example.leitnerbox.adapter.AdapterReview;
 import com.example.leitnerbox.model.Group;
+import com.example.leitnerbox.utils.FaNum;
 import com.example.leitnerbox.utils.Tools;
 import com.example.leitnerbox.utils.ViewAnimation;
 
@@ -39,9 +41,7 @@ public class CardFragment extends Fragment {
         initComponent();
 
         setupExamRecyclerView();
-
-
-
+        setupReviewRecyclerView();
 
 
         return rootView;
@@ -172,8 +172,8 @@ public class CardFragment extends Fragment {
         //create fake data
         List<Group> groupList = new ArrayList<Group>();
 
-        groupList.add(new Group("همه دسته ها", "0"+ " کارت", 0));
-        groupList.add(new Group("عمومی", "0"+ " کارت", 0));
+        groupList.add(new Group("همه دسته ها", "0" + " کارت", 0));
+        groupList.add(new Group("عمومی", "0" + " کارت", 0));
 
         AdapterExam adapterExam = new AdapterExam(groupList, rootView.getContext());
 
@@ -181,6 +181,23 @@ public class CardFragment extends Fragment {
         rv_exam.setLayoutManager(layoutManager);
 
         rv_exam.setAdapter(adapterExam);
+    }
+
+    private void setupReviewRecyclerView() {
+
+        RecyclerView rv_review = rootView.findViewById(R.id.rv_review);
+
+        List<Group> groupList = new ArrayList<Group>();
+
+        groupList.add(new Group("کارت های خانه اول", FaNum.convert("0 کارت"), 0));
+        groupList.add(new Group("عمومی", FaNum.convert("0 کارت"), 0));
+
+        AdapterReview adapterReview = new AdapterReview(groupList, rootView.getContext());
+
+        LinearLayoutManager layoutManager = new LinearLayoutManager(rootView.getContext());
+
+        rv_review.setLayoutManager(layoutManager);
+        rv_review.setAdapter(adapterReview);
     }
 
 }
