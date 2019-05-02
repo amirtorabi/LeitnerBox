@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.example.leitnerbox.R;
 import com.example.leitnerbox.model.Box;
+import com.example.leitnerbox.utils.FaNum;
 
 import java.util.List;
 
@@ -35,8 +36,8 @@ public class AdapterBox extends RecyclerView.Adapter<AdapterBox.OriginalViewHold
 
         Box box = boxList.get(i);
 
-        holder.tvBoxTitle.setText(box.getBoxNumber());
-        holder.tvBoxCartNumber.setText(box.getBoxTotalCards());
+        holder.tvBoxTitle.setText(FaNum.convert2PerisanNumber(box.getBoxNumber()));
+        holder.tvBoxCartNumber.setText(FaNum.convert2PerisanNumber(box.getBoxTotalCards()));
 
 
     }
