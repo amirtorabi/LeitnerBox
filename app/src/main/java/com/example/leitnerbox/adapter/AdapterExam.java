@@ -27,7 +27,7 @@ public class AdapterExam extends RecyclerView.Adapter<AdapterExam.OrginalViewHol
     @Override
     public OrginalViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
 
-        View itemView = LayoutInflater.from(context).inflate(R.layout.item_group, viewGroup,false);
+        View itemView = LayoutInflater.from(context).inflate(R.layout.item_exam, viewGroup,false);
         return new OrginalViewHolder(itemView);
     }
 
