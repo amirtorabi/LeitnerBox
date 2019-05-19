@@ -31,7 +31,7 @@ public class AppController extends Application {
 
     }
 
-    public BoxStore getBoxStore() {
+    public static BoxStore getBoxStore() {
         return boxStore;
     }
 
