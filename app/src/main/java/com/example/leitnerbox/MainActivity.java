@@ -25,6 +25,7 @@ import com.example.leitnerbox.database.Card;
 import com.example.leitnerbox.fragment.CardFragment;
 import com.example.leitnerbox.fragment.HomeFragment;
 import com.example.leitnerbox.utils.ExportExcel;
+import com.example.leitnerbox.utils.ImportExcel;
 import com.example.leitnerbox.utils.ViewAnimation;
 
 import java.util.ArrayList;
@@ -86,6 +87,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
 
             case R.id.restore:
+                ImportExcel.ImportExcel();
                 Toast.makeText(this, "restore Selected", Toast.LENGTH_SHORT).show();
                 break;
 
