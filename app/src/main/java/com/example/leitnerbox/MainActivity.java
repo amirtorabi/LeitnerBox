@@ -21,9 +21,14 @@ import android.widget.Toast;
 import com.example.leitnerbox.activity.ProgressBarActivity;
 import com.example.leitnerbox.activity.SettingActivity;
 import com.example.leitnerbox.adapter.ViewPagerAdapter;
+import com.example.leitnerbox.database.Card;
 import com.example.leitnerbox.fragment.CardFragment;
 import com.example.leitnerbox.fragment.HomeFragment;
+import com.example.leitnerbox.utils.ExportExcel;
 import com.example.leitnerbox.utils.ViewAnimation;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
@@ -85,6 +90,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
 
             case R.id.send2excel:
+                ExportExcel exportExcel = new ExportExcel();
+                List<Card> cardList = new ArrayList<>();
+                exportExcel.ExportExcel(cardList,"test");
                 Toast.makeText(this, "send2excel  Selected", Toast.LENGTH_SHORT).show();
                 break;
 

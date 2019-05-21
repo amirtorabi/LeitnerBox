@@ -34,8 +34,6 @@ dependencies {
 
     implementation 'com.wajahatkarim3.EasyFlipView:EasyFlipView:2.1.2'
 
-    implementation "org.apache.poi:poi:3.17"	     // For `.xls` files
-    implementation "org.apache.poi:poi-ooxml:3.17"	 // For `.xlsx` files
 
 
     testImplementation 'junit:junit:4.12'
