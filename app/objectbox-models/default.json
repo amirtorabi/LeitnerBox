@@ -1,0 +1,146 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:7951077494970478636",
+      "lastPropertyId": "17:8435228831051163445",
+      "name": "Card",
+      "properties": [
+        {
+          "id": "1:3405495394785591848",
+          "name": "id"
+        },
+        {
+          "id": "2:724590563760499470",
+          "name": "deck"
+        },
+        {
+          "id": "3:1518822756002289400",
+          "name": "part"
+        },
+        {
+          "id": "4:8539008770755612084",
+          "name": "front"
+        },
+        {
+          "id": "5:6559930846576238814",
+          "name": "back"
+        },
+        {
+          "id": "6:3023395795811284630",
+          "name": "year"
+        },
+        {
+          "id": "7:473551612623720191",
+          "name": "day"
+        },
+        {
+          "id": "8:1188971296059294108",
+          "name": "review"
+        },
+        {
+          "id": "9:6275416642396579392",
+          "name": "correct"
+        },
+        {
+          "id": "10:1185681233875898593",
+          "name": "package_id"
+        },
+        {
+          "id": "11:3024409738082801151",
+          "name": "starred"
+        },
+        {
+          "id": "12:3232009053097459039",
+          "name": "image_front"
+        },
+        {
+          "id": "13:130142768596408940",
+          "name": "image_back"
+        },
+        {
+          "id": "14:215383876581757555",
+          "name": "audio_front"
+        },
+        {
+          "id": "15:7250909136079218237",
+          "name": "audio_back"
+        },
+        {
+          "id": "16:613775855118211213",
+          "name": "quiz_question"
+        },
+        {
+          "id": "17:8435228831051163445",
+          "name": "quiz_correct"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "2:8764931813785763514",
+      "lastPropertyId": "6:2096061477086462431",
+      "name": "Day",
+      "properties": [
+        {
+          "id": "1:1611002010566095255",
+          "name": "id"
+        },
+        {
+          "id": "2:2830895966427949368",
+          "name": "year"
+        },
+        {
+          "id": "3:2305258927654961655",
+          "name": "day"
+        },
+        {
+          "id": "4:8920880798112379869",
+          "name": "adds"
+        },
+        {
+          "id": "5:6165337173331673167",
+          "name": "reviews"
+        },
+        {
+          "id": "6:2096061477086462431",
+          "name": "corrects"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "3:314620875060381635",
+      "lastPropertyId": "3:6529907368243601785",
+      "name": "Package",
+      "properties": [
+        {
+          "id": "1:854454205369011135",
+          "name": "id"
+        },
+        {
+          "id": "2:3972439258521786582",
+          "name": "name"
+        },
+        {
+          "id": "3:6529907368243601785",
+          "name": "label_color"
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "3:314620875060381635",
+  "lastIndexId": "0:0",
+  "lastRelationId": "0:0",
+  "lastSequenceId": "0:0",
+  "modelVersion": 4,
+  "modelVersionParserMinimum": 4,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [],
+  "retiredRelationUids": [],
+  "version": 1
+}
