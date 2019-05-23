@@ -21,7 +21,7 @@ import io.objectbox.BoxStore;
 
 public class ImportExcel {
 
-    public static final String SAMPLE_XLSX_FILE_PATH = Environment.getExternalStorageDirectory() + "/Leitner/cards.xls";
+    public static final String SAMPLE_XLSX_FILE_PATH = Environment.getExternalStorageDirectory() + "/Leitner/cards.xlsx";
     public static final String TAG = ImportExcel.class.getSimpleName();
 
     public static void ImportExcel() {

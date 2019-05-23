@@ -15,14 +15,15 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
+import java.util.ArrayList;
 import java.util.List;
 
 public class ExportExcel {
 
-    private static final String Folder_NAME = "/LeitenerBox";
+    private static final String Folder_NAME = "/Leitner";
     private  String FILE_NAME = "cards.xlsx";
     File root = Environment.getExternalStorageDirectory();
-    List<Card> cardList;
+    List<Card> cardList= new ArrayList<>();
 
     public void ExportExcel(List<Card> cardLis,String GroupName) {
 
@@ -64,7 +65,7 @@ public class ExportExcel {
 
     private void writeFile(XSSFWorkbook workbook) {
 
-        String outFileName = FILE_NAME;
+        String outFileName = "cards.xlsx";
 
         File dir = new File(root.getAbsolutePath() + Folder_NAME);
         if (!dir.exists()) {
