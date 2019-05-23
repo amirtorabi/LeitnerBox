@@ -1,6 +1,7 @@
 package com.example.leitnerbox;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
@@ -10,6 +11,7 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -94,7 +96,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.send2excel:
                 ExportExcel exportExcel = new ExportExcel();
                 List<Card> cardList = new ArrayList<>();
-                exportExcel.ExportExcel(cardList,"test");
+                exportExcel.ExportExcel(cardList, "test");
                 Toast.makeText(this, "send2excel  Selected", Toast.LENGTH_SHORT).show();
                 break;
 
@@ -121,7 +123,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         } else {
 
-            super.onBackPressed();
+//            super.onBackPressed();
+            backButtonHandler();
 
         }
 
@@ -269,6 +272,33 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
     }
 
+    public void backButtonHandler() {
+
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
+        // Setting Dialog Title
+//        alertDialog.setTitle("آیا می خواهید از برنامه خارج شوید؟");
+        // Setting Dialog Message
+        alertDialog.setMessage("آیا می خواهید از برنامه خارج شوید؟");
+        // Setting Icon to Dialog
+        alertDialog.setIcon(R.drawable.ic_add);
+        // Setting Positive "Yes" Button
+        alertDialog.setPositiveButton("بله",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        finish();
+                    }
+                });
+        // Setting Negative "NO" Button
+        alertDialog.setNegativeButton("خیر",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Write your code here to invoke NO event
+                        dialog.cancel();
+                    }
+                });
+        // Showing Alert Message
+        alertDialog.show();
+    }
 
 }
 
